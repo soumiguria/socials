@@ -44,8 +44,8 @@ class ChatScreen extends GetWidget<ChatController> {
                       SizedBox(height: 9.v),
                       Padding(
                           padding: EdgeInsets.only(right: 16.h),
-                          child: _buildDelivered(
-                              deliveredText: "lbl_delivered".tr)),
+                          child:
+                              _buildDelivered(delivered: "lbl_delivered".tr)),
                       SizedBox(height: 22.v),
                       Align(
                           alignment: Alignment.centerLeft,
@@ -113,8 +113,8 @@ class ChatScreen extends GetWidget<ChatController> {
                       SizedBox(height: 9.v),
                       Padding(
                           padding: EdgeInsets.only(right: 16.h),
-                          child: _buildDelivered(
-                              deliveredText: "lbl_delivered".tr)),
+                          child:
+                              _buildDelivered(delivered: "lbl_delivered".tr)),
                       SizedBox(height: 5.v)
                     ])),
             bottomNavigationBar: _buildMessageBox()));
@@ -165,9 +165,9 @@ class ChatScreen extends GetWidget<ChatController> {
   }
 
   /// Common widget
-  Widget _buildDelivered({required String deliveredText}) {
+  Widget _buildDelivered({required String delivered}) {
     return Row(mainAxisAlignment: MainAxisAlignment.end, children: [
-      Text(deliveredText,
+      Text(delivered,
           style: CustomTextStyles.bodySmallGray600
               .copyWith(color: appTheme.gray600)),
       CustomImageView(
